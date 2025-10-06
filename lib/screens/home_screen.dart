@@ -9,6 +9,15 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     // ... (App Bar y otras cosas)
     return Scaffold(
+      appBar: AppBar(
+        // ⭐ AGREGAR UN APPBAR
+        title: const Text('CITY TOUR'),
+        backgroundColor: const Color.fromARGB(255, 7, 4, 150),
+        iconTheme: const IconThemeData(
+          color: Colors.white,
+        ), // Color del ícono del drawer (el 'hamburguesa')
+        titleTextStyle: const TextStyle(color: Colors.white, fontSize: 20),
+      ),
       drawer: Drawer(
         child: ListView(
           padding: EdgeInsets.zero,
@@ -49,11 +58,31 @@ class HomeScreen extends StatelessWidget {
           ],
         ),
       ),
-
-      // ... (Resto del body con el botón 'Iniciar Tour')
-
-      // Asegúrate de cambiar la navegación del botón 'Iniciar Tour'
-      // a SecondRoute, si no lo has hecho ya.
+      body: Stack(
+        fit: StackFit.expand, // Esto hace que el Stack ocupe todo el espacio
+        children: <Widget>[
+          // 1. EL FONDO (Background)
+          Image.asset('assets/background.jpg', fit: BoxFit.cover),
+          Center(
+            child: ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => SecondRoute()),
+                );
+              },
+              style: ElevatedButton.styleFrom(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 40,
+                  vertical: 20,
+                ),
+                textStyle: const TextStyle(fontSize: 18),
+              ),
+              child: const Text('Iniciar Tour'),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
