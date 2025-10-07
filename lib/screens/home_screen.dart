@@ -3,7 +3,7 @@ import 'package:city_tour/screens/second_screen.dart';
 import 'package:city_tour/screens/third_screen.dart';
 
 class HomeScreen extends StatelessWidget {
-  HomeScreen({super.key});
+  const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +12,7 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         // ⭐ AGREGAR UN APPBAR
         title: const Text('CITY TOUR'),
-        backgroundColor: const Color.fromARGB(255, 7, 4, 150),
+        backgroundColor: const Color.fromARGB(255, 103, 231, 80),
         iconTheme: const IconThemeData(
           color: Colors.white,
         ), // Color del ícono del drawer (el 'hamburguesa')
@@ -23,7 +23,9 @@ class HomeScreen extends StatelessWidget {
           padding: EdgeInsets.zero,
           children: <Widget>[
             const DrawerHeader(
-              decoration: BoxDecoration(color: Color.fromARGB(255, 7, 4, 150)),
+              decoration: BoxDecoration(
+                color: Color.fromARGB(255, 172, 218, 45),
+              ),
               child: Text(
                 'Menú de Navegación',
                 style: TextStyle(color: Colors.white, fontSize: 24),
@@ -63,7 +65,10 @@ class HomeScreen extends StatelessWidget {
         children: <Widget>[
           // 1. EL FONDO (Background)
           Image.asset('assets/background.jpg', fit: BoxFit.cover),
-          Center(
+          Positioned(
+            // 2. EL BOTÓN (Button)
+            top: 50,
+            right: 20,
             child: ElevatedButton(
               onPressed: () {
                 Navigator.push(

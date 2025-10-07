@@ -17,18 +17,22 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
+  # 🔥 Core de Firebase (siempre obligatorio)
+  firebase_core: ^4.1.1
+  # 🔑 Autenticación (si usás login, Google, etc.)
+  firebase_auth: ^6.1.0
+  # 🗄 Base de datos en la nube (si usás Firestore)
+  cloud_firestore: ^6.0.2
+  # 📦 Almacenamiento de archivos (si subís o bajás imágenes, audio, etc.)
+  firebase_storage: ^13.0.2
+
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
-  # The "flutter_lints" package below contains a set of recommended lints to
-  # encourage good coding practices. The lint set provided by the package is
-  # activated in the `analysis_options.yaml` file located at the root of your
-  # package. See that file for information about deactivating specific lint
-  # rules and activating additional ones.
-  flutter_lints: ^5.0.0
-  flutter_launcher_icons: "^0.13.1"
+  flutter_lints: ^6.0.0
+  flutter_launcher_icons: "^0.14.4"
 
 flutter_launcher_icons:
   image_path: "assets/logo_city_tour.png" # Usa tu nombre de archivo
