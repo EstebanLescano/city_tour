@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "153804149027",
+    "project_id": "city-tour-8dc89",
+    "storage_bucket": "city-tour-8dc89.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:153804149027:android:f2e476ca69575c1b51fc96",
+        "android_client_info": {
+          "package_name": "com.eal.city_tour"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBgqT0FLwudiM6re9PLmj_mSMTjI1ENtmg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

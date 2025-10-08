@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:city_tour/data/tour_data.dart';
 import 'package:city_tour/widgets/tour_day_card.dart';
 
-class SecondRoute extends StatelessWidget {
-  const SecondRoute({super.key});
+class TourListScreen extends StatelessWidget {
+  const TourListScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

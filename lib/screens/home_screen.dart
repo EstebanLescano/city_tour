@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:city_tour/screens/second_screen.dart';
-import 'package:city_tour/screens/third_screen.dart';
+import 'package:city_tour/screens/tour_list_screen.dart';
+import 'package:city_tour/screens/about_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -15,7 +15,7 @@ class HomeScreen extends StatelessWidget {
         backgroundColor: const Color.fromARGB(255, 103, 231, 80),
         iconTheme: const IconThemeData(
           color: Colors.white,
-        ), // Color del ícono del drawer (el 'hamburguesa')
+        ), // Color del ícono del drawer
         titleTextStyle: const TextStyle(color: Colors.white, fontSize: 20),
       ),
       drawer: Drawer(
@@ -40,7 +40,7 @@ class HomeScreen extends StatelessWidget {
                 Navigator.pop(context); // Cierra el drawer
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => SecondRoute()),
+                  MaterialPageRoute(builder: (context) => TourListScreen()),
                 );
               },
             ),
@@ -53,7 +53,7 @@ class HomeScreen extends StatelessWidget {
                 Navigator.pop(context); // Cierra el drawer
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => ThirdScreen()),
+                  MaterialPageRoute(builder: (context) => AboutScreen()),
                 );
               },
             ),
@@ -73,7 +73,7 @@ class HomeScreen extends StatelessWidget {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => SecondRoute()),
+                  MaterialPageRoute(builder: (context) => TourListScreen()),
                 );
               },
               style: ElevatedButton.styleFrom(

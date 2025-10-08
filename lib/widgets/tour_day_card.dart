@@ -1,15 +1,51 @@
 import 'package:flutter/material.dart';
+import '../screens/tour_detail_screen.dart';
 
 // El widget debe ser StatelessWidget porque solo muestra datos que recibe.
 class TourDayCard extends StatelessWidget {
-  // 1. Definimos las propiedades que necesita el widget.
   final Map<String, dynamic> tourDay;
-  // 2. El constructor para recibir los datos.
+
   const TourDayCard({super.key, required this.tourDay});
 
   @override
   Widget build(BuildContext context) {
-    // 3. Extraemos el widget complejo (el InkWell envuelto en Padding)
+    final dynamic imageUrl = tourDay['imageUrl'];
+
+    BoxDecoration baseDecoration = BoxDecoration(
+      borderRadius: BorderRadius.circular(15),
+      boxShadow: const [
+        BoxShadow(color: Colors.black26, blurRadius: 5.0, offset: Offset(0, 5)),
+      ],
+      color: imageUrl is Color ? imageUrl : null,
+    );
+
+    Widget backgroundWidget = Container();
+
+    if (imageUrl is String) {
+      backgroundWidget = ClipRRect(
+        borderRadius: BorderRadius.circular(15),
+        child: Image.asset(
+          imageUrl,
+          fit: BoxFit.cover,
+          width: double.infinity,
+          height: 150,
+          errorBuilder: (context, error, stackTrace) {
+            // Si la imagen falla en cargar, esto se muestra en su lugar.
+            print('ERROR AL CARGAR IMAGEN: $imageUrl');
+            return Container(
+              color: Colors.red.withOpacity(0.5), // Fondo ROJO si falla
+              child: const Center(
+                child: Text(
+                  "❌ Error de Asset",
+                  style: TextStyle(color: Colors.white),
+                ),
+              ),
+            );
+          },
+        ),
+      );
+    }
+
     return Padding(
       padding: const EdgeInsets.only(bottom: 15.0), // Espacio entre elementos
       child: InkWell(
@@ -20,24 +56,11 @@ class TourDayCard extends StatelessWidget {
           );
         },
         child: Container(
-          height: 200, // Altura fija para la tarjeta
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(15),
-            boxShadow: const [
-              BoxShadow(
-                color: Colors.black26,
-                blurRadius: 5.0,
-                offset: Offset(0, 5),
-              ),
-            ],
-            // Simulación de la imagen de fondo (reemplaza 'imageUrl' por AssetImage)
-            color: tourDay['imageUrl'] as Color,
-          ),
-
-          // Usamos Stack para superponer el texto sobre la imagen
+          height: 150, // Altura fija para la tarjeta
+          decoration: baseDecoration,
           child: Stack(
             children: [
-              // Capa oscura semi-transparente para mejorar la legibilidad
+              backgroundWidget,
               Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(15),
