@@ -1,5 +1,5 @@
+import 'package:city_tour/widgets/tour_day_text_card.dart';
 import 'package:flutter/material.dart';
-import '../widgets/tour_day_text_card.dart';
 
 class TourDetailScreen extends StatelessWidget {
   final Map<String, dynamic> tourDay;
@@ -8,31 +8,8 @@ class TourDetailScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Aquí puedes definir el itinerario específico para cada día
-    // Por simplicidad, usaremos un itinerario estático de ejemplo
-    final List<Map<String, dynamic>> itinerary = [
-      {
-        'title': 'Punto de Partida (8:00 AM)',
-        'content': 'Reunión en la Plaza Central. Desayuno ligero incluido.',
-        'icon': Icons.access_time,
-      },
-      {
-        'title': 'Visita al Templo Antiguo (10:00 AM)',
-        'content':
-            'Recorrido de 2 horas con guía especializado. ¡No olvides tu cámara!',
-        'icon': Icons.church,
-      },
-      {
-        'title': 'Almuerzo y Descanso (1:00 PM)',
-        'content': 'Tiempo libre para almorzar en el Mercado de San Telmo.',
-        'icon': Icons.restaurant,
-      },
-      {
-        'title': 'Regreso (5:00 PM)',
-        'content': 'Retorno al punto de partida o al hotel.',
-        'icon': Icons.directions_bus,
-      },
-    ];
+    final List<Map<String, dynamic>> itinerary =
+        tourDay['itinerary'] as List<Map<String, dynamic>>? ?? [];
 
     return Scaffold(
       appBar: AppBar(
@@ -71,7 +48,7 @@ class TourDetailScreen extends StatelessWidget {
               return TourDayTextCard(
                 title: item['title'] as String,
                 content: item['content'] as String,
-                icon: item['icon'] as IconData,
+                icon: item['icon'] as IconData? ?? Icons.info_outline,
               );
             }).toList(),
           ],

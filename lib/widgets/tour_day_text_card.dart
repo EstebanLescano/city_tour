@@ -37,7 +37,7 @@ class TourDayTextCard extends StatelessWidget {
             Row(
               children: [
                 // Icono
-                Icon(icon, color: Theme.of(context).primaryColor),
+                Icon(icon, color: Colors.blueAccent),
                 const SizedBox(width: 8),
                 // Título
                 Expanded(
@@ -46,7 +46,7 @@ class TourDayTextCard extends StatelessWidget {
                     style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
-                      color: Theme.of(context).primaryColor,
+                      color: Colors.limeAccent,
                     ),
                   ),
                 ),
@@ -56,7 +56,10 @@ class TourDayTextCard extends StatelessWidget {
             // Contenido/Descripción
             Text(
               content,
-              style: const TextStyle(fontSize: 16, color: Colors.black87),
+              style: TextStyle(
+                color: Theme.of(context).primaryColor,
+                fontSize: 16,
+              ),
             ),
           ],
         ),

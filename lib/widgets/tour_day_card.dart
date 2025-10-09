@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../screens/tour_detail_screen.dart';
+import 'package:city_tour/screens/tour_detail_screen.dart';
 
 // El widget debe ser StatelessWidget porque solo muestra datos que recibe.
 class TourDayCard extends StatelessWidget {
@@ -50,9 +50,14 @@ class TourDayCard extends StatelessWidget {
       padding: const EdgeInsets.only(bottom: 15.0), // Espacio entre elementos
       child: InkWell(
         onTap: () {
-          // TODO: Implementar la navegación a la pantalla de detalles del tour
-          ScaffoldMessenger.of(context).showSnackBar(
-            SnackBar(content: Text('Clic en: ${tourDay['title']}')),
+          print('✅ CLIC DETECTADO EN: ${tourDay['title']}');
+          // Acción al tocar la tarjeta
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              // Navegamos a TourDetailScreen y le pasamos los datos del día
+              builder: (context) => TourDetailScreen(tourDay: tourDay),
+            ),
           );
         },
         child: Container(
