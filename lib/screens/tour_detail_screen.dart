@@ -50,7 +50,7 @@ class TourDetailScreen extends StatelessWidget {
                 content: item['content'] as String,
                 icon: item['icon'] as IconData? ?? Icons.info_outline,
               );
-            }).toList(),
+            }),
           ],
         ),
       ),

@@ -50,7 +50,6 @@ class TourDayCard extends StatelessWidget {
       padding: const EdgeInsets.only(bottom: 15.0), // Espacio entre elementos
       child: InkWell(
         onTap: () {
-          print('✅ CLIC DETECTADO EN: ${tourDay['title']}');
           // Acción al tocar la tarjeta
           Navigator.push(
             context,

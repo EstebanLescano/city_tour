@@ -21,7 +21,7 @@ dependencies {
 }
 
 android {
-    namespace = "com.example.city_tour"
+    namespace = "com.eal.city_tour"
     compileSdk = flutter.compileSdkVersion
     ndkVersion = flutter.ndkVersion
 
@@ -36,7 +36,7 @@ android {
 
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
-        applicationId = "com.example.city_tour"
+        applicationId = "com.eal.city_tour"
         // You can update the following values to match your application needs.
         // For more information, see: https://flutter.dev/to/review-gradle-config.
         minSdk = flutter.minSdkVersion

@@ -6,7 +6,7 @@ void main() {
 }
 
 class CityTourApp extends StatelessWidget {
-  CityTourApp({super.key});
+  const CityTourApp({super.key});
 
   @override
   Widget build(BuildContext context) {
