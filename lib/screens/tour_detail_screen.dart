@@ -48,9 +48,9 @@ class TourDetailScreen extends StatelessWidget {
               return TourDayTextCard(
                 title: item['title'] as String,
                 content: item['content'] as String,
-                icon: item['icon'] as IconData? ?? Icons.info_outline,
+                imageUrl: item['imagesquareUrl'] as String?,
               );
-            }),
+            }).toList(),
           ],
         ),
       ),

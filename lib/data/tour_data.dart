@@ -6,10 +6,16 @@ final List<Map<String, dynamic>> tourDays = const [
     'imageUrl': 'assets/exploracion_urbana.jpg',
     'itinerary': [
       {
-        'title': 'Desayuno en Café Central',
+        'title': 'Desayuno en Café Central (Con Imagen Real)',
+        'imagesquareUrl': 'squadcard/cafe.jpg',
         'content':
-            'Comienza tu día con un delicioso desayuno en el Café Central, conocido por su café artesanal y pasteles frescos.',
-        'icon': Icons.local_cafe,
+            'Comienza tu día con un delicioso desayuno en el Café Central,conocido por su café artesanal y pasteles frescos.',
+      },
+      {
+        'title': 'Visita al Museo (Con Imagen Real)',
+        'imagesquareUrl': 'squadcard/museo.jpg',
+        'content':
+            'Explora la colección de arte renacentista en el museo principal.',
       },
     ],
   },
@@ -20,21 +26,21 @@ final List<Map<String, dynamic>> tourDays = const [
     'itinerary': [
       {
         'title': 'Desayuno en Bistró Verde',
+        'imagesquareUrl': 'squadcard/cafe.jpg',
         'content':
             'Comienza tu día con un desayuno saludable en Bistró Verde, famoso por sus opciones orgánicas y veganas.',
-        'icon': Icons.local_cafe,
       },
       {
         'title': 'Excursión al Parque Nacional',
         'content':
             'Únete a una excursión guiada por el Parque Nacional para descubrir la flora y fauna local.',
-        'icon': Icons.park,
+        'imagesquareUrl': 'squadcard/excursion.jpg',
       },
       {
         'title': 'Almuerzo tipo picnic',
         'content':
             'Disfruta de un almuerzo tipo picnic en una zona designada dentro del parque, rodeado de naturaleza.',
-        'icon': Icons.lunch_dining,
+        'imagesquareUrl': 'squadcard/almuerzo.jpg',
       },
     ],
   },
@@ -46,19 +52,19 @@ final List<Map<String, dynamic>> tourDays = const [
         'title': 'Desayuno en Mercado Gourmet',
         'content':
             'Comienza tu día explorando los sabores locales en el Mercado Gourmet, donde encontrarás productos frescos y artesanales.',
-        'icon': Icons.local_grocery_store,
+        'imagesquareUrl': 'squadcard/almuerzo.jpg',
       },
       {
         'title': 'Clase de Cocina',
         'content':
             'Participa en una clase de cocina para aprender a preparar platos típicos de la región con un chef local.',
-        'icon': Icons.kitchen,
+        'imagesquareUrl': 'squadcard/almuerzo.jpg',
       },
       {
         'title': 'Almuerzo en Restaurante El Sabor',
         'content':
             'Disfruta de un almuerzo en El Sabor, conocido por su menú de temporada y su enfoque en ingredientes locales.',
-        'icon': Icons.restaurant,
+        'imagesquareUrl': 'squadcard/almuerzo.jpg',
       },
     ],
   },
@@ -66,18 +72,75 @@ final List<Map<String, dynamic>> tourDays = const [
   {
     'title': 'Día 4: Museos y Arte ',
     'imageUrl': 'assets/museos_y_arte.jpg',
-    'itinerary': [],
+    'itinerary': [
+      {
+        'title': 'Desayuno en Mercado Gourmet',
+        'content':
+            'Comienza tu día explorando los sabores locales en el Mercado Gourmet, donde encontrarás productos frescos y artesanales.',
+        'imagesquareUrl': 'squadcard/almuerzo.jpg',
+      },
+      {
+        'title': 'Clase de Cocina',
+        'content':
+            'Participa en una clase de cocina para aprender a preparar platos típicos de la región con un chef local.',
+        'imagesquareUrl': 'squadcard/almuerzo.jpg',
+      },
+      {
+        'title': 'Almuerzo en Restaurante El Sabor',
+        'content':
+            'Disfruta de un almuerzo en El Sabor, conocido por su menú de temporada y su enfoque en ingredientes locales.',
+        'imagesquareUrl': 'squadcard/almuerzo.jpg',
+      },
+    ],
   },
 
   {
     'title': 'Día 5: Playas y Sol ',
     'imageUrl': 'assets/playa.jpg',
-    'itinerary': [],
+    'itinerary': [
+      {
+        'title': 'Desayuno en Mercado Gourmet',
+        'content':
+            'Comienza tu día explorando los sabores locales en el Mercado Gourmet, donde encontrarás productos frescos y artesanales.',
+        'imagesquareUrl': 'squadcard/almuerzo.jpg',
+      },
+      {
+        'title': 'Clase de Cocina',
+        'content':
+            'Participa en una clase de cocina para aprender a preparar platos típicos de la región con un chef local.',
+        'imagesquareUrl': 'squadcard/almuerzo.jpg',
+      },
+      {
+        'title': 'Almuerzo en Restaurante El Sabor',
+        'content':
+            'Disfruta de un almuerzo en El Sabor, conocido por su menú de temporada y su enfoque en ingredientes locales.',
+        'imagesquareUrl': 'squadcard/almuerzo.jpg',
+      },
+    ],
   },
 
   {
     'title': 'Día 6: Mercados y Compras ',
     'imageUrl': 'assets/mercado.jpg',
-    'itinerary': [],
+    'itinerary': [
+      {
+        'title': 'Desayuno en Mercado Gourmet',
+        'content':
+            'Comienza tu día explorando los sabores locales en el Mercado Gourmet, donde encontrarás productos frescos y artesanales.',
+        'imagesquareUrl': 'squadcard/almuerzo.jpg',
+      },
+      {
+        'title': 'Clase de Cocina',
+        'content':
+            'Participa en una clase de cocina para aprender a preparar platos típicos de la región con un chef local.',
+        'imagesquareUrl': 'squadcard/almuerzo.jpg',
+      },
+      {
+        'title': 'Almuerzo en Restaurante El Sabor',
+        'content':
+            'Disfruta de un almuerzo en El Sabor, conocido por su menú de temporada y su enfoque en ingredientes locales.',
+        'imagesquareUrl': 'squadcard/almuerzo.jpg',
+      },
+    ],
   },
 ];
