@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 
 final List<Map<String, dynamic>> tourDays = const [
   {
@@ -15,7 +14,8 @@ final List<Map<String, dynamic>> tourDays = const [
         'title': 'Visita al Museo (Con Imagen Real)',
         'imagesquareUrl': 'squadcard/museo.jpg',
         'content':
-            'Explora la colección de arte renacentista en el museo principal.',
+            'Explora la colección de arte renacentista en el museo principal. https://maps.app.goo.gl/3547C3xN7gE9yL1K9',
+        'targetUrl': 'https://maps.app.goo.gl/3547C3xN7gE9yL1K9',
       },
     ],
   },
