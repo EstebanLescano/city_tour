@@ -14,8 +14,8 @@ final List<Map<String, dynamic>> tourDays = const [
         'title': 'Visita al Museo (Con Imagen Real)',
         'imagesquareUrl': 'squadcard/museo.jpg',
         'content':
-            'Explora la colección de arte renacentista en el museo principal. https://maps.app.goo.gl/3547C3xN7gE9yL1K9',
-        'targetUrl': 'https://maps.app.goo.gl/3547C3xN7gE9yL1K9',
+            'Explora la colección de arte renacentista en el museo principal.',
+        'targetUrl': 'https://www.google.com/maps/place/Museo+Provincial+de+Ciencias+Naturales+%22Dr.+Arturo+Umberto+Ill%C3%ADa%22/@-31.4273202,-64.1839199,707m/data=!3m2!1e3!4b1!4m6!3m5!1s0x9432a29188c000a1:0x3e07ff1e00e23214!8m2!3d-31.4273248!4d-64.181345!16s%2Fg%2F1hhx042r2?authuser=0&entry=ttu&g_ep=EgoyMDI1MTAxMi4wIKXMDSoASAFQAw%3D%3D'
       },
     ],
   },

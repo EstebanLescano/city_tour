@@ -49,6 +49,7 @@ class TourDetailScreen extends StatelessWidget {
                 title: item['title'] as String,
                 content: item['content'] as String,
                 imageUrl: item['imagesquareUrl'] as String?,
+                targetUrl: item['targetUrl'] as String?,
               );
             }).toList(),
           ],

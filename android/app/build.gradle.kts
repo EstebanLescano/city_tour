@@ -1,14 +1,18 @@
 plugins {
-    id("com.android.application")
-    id("kotlin-android")
+    id("com.android.application") 
+    id("org.jetbrains.kotlin.android") 
+    id("com.google.gms.google-services") 
     id("dev.flutter.flutter-gradle-plugin")
-    id("com.google.gms.google-services")
 }
 
 dependencies {
   // Import the Firebase BoM
-  implementation(platform("com.google.firebase:firebase-bom:34.3.0"))
+  implementation(platform("com.google.firebase:firebase-bom:34.0.0"))
   implementation("com.google.firebase:firebase-analytics")
+  implementation("com.google.firebase:firebase-auth")
+  implementation("com.google.firebase:firebase-firestore")
+  implementation("com.google.firebase:firebase-storage")
+  implementation("com.google.firebase:firebase-crashlytics")
 }
 
 android {
@@ -29,7 +33,7 @@ android {
         applicationId = "com.eal.city_tour"
         minSdk = flutter.minSdkVersion
         targetSdk = flutter.targetSdkVersion
-        versionCode = flutter.versionCode
+        versionCode = flutter.versionCode.toInt()
         versionName = flutter.versionName
     }
 
@@ -38,8 +42,4 @@ android {
             signingConfig = signingConfigs.getByName("debug")
         }
     }
-}
-
-flutter {
-    source = "../.."
 }
